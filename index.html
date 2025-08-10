@@ -4,10 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de investimentos</title>
+    <link rel="stylesheet" href="./src/styles.css">
 </head>
-<body>
-    <h1>Calculadora de investimentos</h1>
-    
+
+<body class="h-dvh grid grid-cols-3 grid-rows-2">
+    <aside class="row-span-2 bg-green-200 flex flex-col justify-between px-3 py-5">
+        <h1 class="font-semibold py-3 ">Calculadora de investimentos</h1>
+        <form class="w-full">
+            <div class="flex w-full">
+                <input type="text" value="R$" disabled class="w-1/4">
+                <input type="number" id="inicial-amount" placeholder="0,0" class="w-1/2">
+                <select name="" id="" class="w-1/4">
+                    <option value="monthly">Mensal</option>
+                    <option value="yearly">Anual</option>
+                </select>
+            </div>
+
+           
+        </form>
+        <div class="flex">
+                <button>Enviar</button>
+                <button>Limpar</button>
+            </div>
+    </aside>
+
+
+
+    <div class="">
+        <p>
+        Section 2
+        </p>
+    </div>
+    <div>
+        <p>
+        Section 3
+        </p>
+    </div>
+
+    <div>
+        <p>Section 4</p>
+    </div>
+
+    <div>
+        <p>Section 5</p>
+    </div>
     
 </body>
 </html>
