@@ -1,10 +1,11 @@
 import { generateReturnsArray } from "./calculateFee.js"
 
 //Coletando as variáveis do formulário
-let form = document.getElementById('formularioPrincipal')
-let buttonCalculate = document.getElementById('buttonCalculate')
+let form = document.getElementById('mainForm')
+//let buttonCalculate = document.getElementById('buttonCalculate')
 
-function renderProgression() {
+function renderProgression(event) {
+    event.preventDefault()
     const initialAmount = Number(document.getElementById('initialAmount').value)
     const aditionalAmount = Number(document.getElementById('aditionalAmount').value)
     const timeHorizon = Number(document.getElementById('timeHorizon').value)
@@ -22,4 +23,4 @@ function renderProgression() {
     console.log(returnsArray)
 }
 
-buttonCalculate.addEventListener('click', renderProgression)
+form.addEventListener('submit', renderProgression)

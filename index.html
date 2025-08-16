@@ -10,28 +10,28 @@
 <body class="h-dvh grid grid-cols-3 grid-rows-2">
     <aside class="row-span-2 bg-green-200 flex flex-col justify-between px-3 py-5">
         <h1 class="font-semibold py-3 ">Calculadora de investimentos</h1>
-        <form id = 'formularioPrincipal' class="w-full">
-
-            <div class="px-5 my-7">
+        <form id = 'mainForm' class="w-full">
+            <div class="px-5 my-7 h-16">
                 <label for="inicial-amount" class="font-bold text-grey-500">Quantia inicial</label>
-                <div class="flex w-full ">
+                <div class="flex w-full border-2 border-red-600">
                     <input type="text" value="R$" disabled class="w-1/4 rounded-sm border-2 px-3">
-                    <input type="number" id="initialAmount" placeholder="0,0" class="w-3/4 border-2 px-3">
+                    <input required type="number" id="initialAmount" placeholder="0,0" class="w-3/4 border-2 px-3">
                 </div>
+                <p class="text-red-500">Quantia inicial precisa ser maior que 0</p>
             </div>
-
-            <div class="px-5 my-7">
+            
+            <div class="px-5 my-7 h-16">
                 <label for="inicial-amount" class="font-bold text-grey-500">Aportes adicionais</label>
-                <div class="flex w-full ">
+                <div class="flex w-full error">
                     <input type="text" value="R$" disabled class="w-1/4 rounded-sm border-2 px-3">
                     <input type="number" id="aditionalAmount" placeholder="0,0" class="w-3/4 border-2 px-3">
                 </div>
             </div>
 
-             <div class="px-5 my-7">
+             <div class="px-5 my-7 h-16">
                 <label for="inicial-amount" class="font-bold text-grey-500">Prazo</label>
                 <div class="flex w-full ">
-                    <input type="number" id="timeHorizon" placeholder="0" class="w-3/4 border-2 px-3">
+                    <input required type="number" id="timeHorizon" placeholder="0" class="w-3/4 border-2 px-3">
                     <select id="timeHorizonOption" class="w-1/4 rounded-sm border-2 hover:bg-emerald-600 hover:text-slate-200 px-1">
                         <option value="monthly">Mensal</option>
                         <option value="yearly">Anual</option>
@@ -39,12 +39,11 @@
                 </div>
             </div>
 
-
-             <div class="px-5 my-7">
+             <div class="px-5 my-7 h-16">
                 <label for="inicial-amount" class="font-bold text-grey-500">Rentabilidade</label>
                 <div class="flex w-full">
                     <input type="text" value="%" disabled class="w-1/4 rounded-sm border-2 px-3">
-                    <input type="number" id="returnRate" placeholder="0,0" class="w-1/2 border-2 px-3">
+                    <input required type="number" id="returnRate" placeholder="0,0" class="w-1/2 border-2 px-3">
                     <select name="" id="returnRateOption" class="w-1/4 rounded-sm border-2 hover:bg-emerald-600 hover:text-slate-200 px-1">
                         <option value="monthly">Mensal</option>
                         <option value="yearly">Anual</option>
@@ -52,19 +51,21 @@
                 </div>
             </div>
 
-             <div class="px-5 my-7">
+             <div class="px-5 my-7 h-16">
                 <label for="inicial-amount" class="font-bold text-grey-500">Imposto sobre o lucro</label>
                 <div class="flex w-full ">
                     <input type="text" value="%" disabled class="w-1/4 rounded-sm border-2 px-3">
-                    <input type="number" id="tax" placeholder="0,0" class="w-3/4 border-2 px-3">
+                    <input required type="number" id="tax" placeholder="0,0" class="w-3/4 border-2 px-3">
                 </div>
             </div>
+
+            
 
 
            
         </form>
         <div class="flex place-content-center ">
-                <button id="buttonCalculate" type="submit" class="p-3 mr-5 bg-gray-700 rounded-md text-white">Enviar</button>
+                <button id="buttonCalculate" form= "mainForm" type="submit" class="p-3 mr-5 bg-gray-700 rounded-md text-white">Enviar</button>
                 <button class="p-3 mr-5 bg-gray-700 rounded-md text-white">Limpar</button>
             </div>
     </aside>
