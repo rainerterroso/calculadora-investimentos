@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de investimentos</title>
-    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="input.css">
 </head>
 
 <body class="h-dvh grid grid-cols-3 grid-rows-2">
     <aside class="row-span-2 bg-green-200 flex flex-col justify-between px-3 py-5">
         <h1 class="font-semibold py-3 ">Calculadora de investimentos</h1>
-        <form class="w-full">
+        <form id = 'formularioPrincipal' class="w-full">
 
             <div class="px-5 my-7">
                 <label for="inicial-amount" class="font-bold text-grey-500">Quantia inicial</label>
                 <div class="flex w-full ">
                     <input type="text" value="R$" disabled class="w-1/4 rounded-sm border-2 px-3">
-                    <input type="number" id="inicial-amount" placeholder="0,0" class="w-3/4 border-2 px-3">
+                    <input type="number" id="initialAmount" placeholder="0,0" class="w-3/4 border-2 px-3">
                 </div>
             </div>
 
@@ -24,15 +24,15 @@
                 <label for="inicial-amount" class="font-bold text-grey-500">Aportes adicionais</label>
                 <div class="flex w-full ">
                     <input type="text" value="R$" disabled class="w-1/4 rounded-sm border-2 px-3">
-                    <input type="number" id="increase" placeholder="0,0" class="w-3/4 border-2 px-3">
+                    <input type="number" id="aditionalAmount" placeholder="0,0" class="w-3/4 border-2 px-3">
                 </div>
             </div>
 
              <div class="px-5 my-7">
                 <label for="inicial-amount" class="font-bold text-grey-500">Prazo</label>
                 <div class="flex w-full ">
-                    <input type="number" id="term" placeholder="0" class="w-3/4 border-2 px-3">
-                    <select name="" id="option-term" class="w-1/4 rounded-sm border-2 hover:bg-emerald-600 hover:text-slate-200 px-1">
+                    <input type="number" id="timeHorizon" placeholder="0" class="w-3/4 border-2 px-3">
+                    <select id="timeHorizonOption" class="w-1/4 rounded-sm border-2 hover:bg-emerald-600 hover:text-slate-200 px-1">
                         <option value="monthly">Mensal</option>
                         <option value="yearly">Anual</option>
                     </select>
@@ -44,8 +44,8 @@
                 <label for="inicial-amount" class="font-bold text-grey-500">Rentabilidade</label>
                 <div class="flex w-full">
                     <input type="text" value="%" disabled class="w-1/4 rounded-sm border-2 px-3">
-                    <input type="number" id="profit" placeholder="0,0" class="w-1/2 border-2 px-3">
-                    <select name="" id="option-profit" class="w-1/4 rounded-sm border-2 hover:bg-emerald-600 hover:text-slate-200 px-1">
+                    <input type="number" id="returnRate" placeholder="0,0" class="w-1/2 border-2 px-3">
+                    <select name="" id="returnRateOption" class="w-1/4 rounded-sm border-2 hover:bg-emerald-600 hover:text-slate-200 px-1">
                         <option value="monthly">Mensal</option>
                         <option value="yearly">Anual</option>
                     </select>
@@ -60,13 +60,11 @@
                 </div>
             </div>
 
-            
-            
 
            
         </form>
         <div class="flex place-content-center ">
-                <button class="p-3 mr-5 bg-gray-700 rounded-md text-white">Enviar</button>
+                <button id="buttonCalculate" type="submit" class="p-3 mr-5 bg-gray-700 rounded-md text-white">Enviar</button>
                 <button class="p-3 mr-5 bg-gray-700 rounded-md text-white">Limpar</button>
             </div>
     </aside>
@@ -91,6 +89,8 @@
     <div>
         <p>Section 5</p>
     </div>
+
+    <script type="module" src="src/main.js"></script>
     
 </body>
 </html>
