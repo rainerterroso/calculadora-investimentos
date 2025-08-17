@@ -13,25 +13,24 @@
         <form id = 'mainForm' class="w-full">
             <div class="px-5 my-7 h-16">
                 <label for="inicial-amount" class="font-bold text-grey-500">Quantia inicial</label>
-                <div class="flex w-full border-2 border-red-600">
+                <div class="flex w-full" id="initialAmountDiv">
                     <input type="text" value="R$" disabled class="w-1/4 rounded-sm border-2 px-3">
-                    <input required type="number" id="initialAmount" placeholder="0,0" class="w-3/4 border-2 px-3">
+                    <input required type="number" id="initialAmount" name="initialAmount" placeholder="0,0" class="w-3/4 border-2 px-3">
                 </div>
-                <p class="text-red-500">Quantia inicial precisa ser maior que 0</p>
             </div>
             
             <div class="px-5 my-7 h-16">
                 <label for="inicial-amount" class="font-bold text-grey-500">Aportes adicionais</label>
-                <div class="flex w-full error">
+                <div class="flex w-full">
                     <input type="text" value="R$" disabled class="w-1/4 rounded-sm border-2 px-3">
-                    <input type="number" id="aditionalAmount" placeholder="0,0" class="w-3/4 border-2 px-3">
+                    <input type="number" id="aditionalAmount" name="aditionalAmount" placeholder="0,0" class="w-3/4 border-2 px-3">
                 </div>
             </div>
 
              <div class="px-5 my-7 h-16">
                 <label for="inicial-amount" class="font-bold text-grey-500">Prazo</label>
                 <div class="flex w-full ">
-                    <input required type="number" id="timeHorizon" placeholder="0" class="w-3/4 border-2 px-3">
+                    <input required type="number" id="timeHorizon" name="timeHorizon" placeholder="0" class="w-3/4 border-2 px-3">
                     <select id="timeHorizonOption" class="w-1/4 rounded-sm border-2 hover:bg-emerald-600 hover:text-slate-200 px-1">
                         <option value="monthly">Mensal</option>
                         <option value="yearly">Anual</option>
@@ -43,7 +42,7 @@
                 <label for="inicial-amount" class="font-bold text-grey-500">Rentabilidade</label>
                 <div class="flex w-full">
                     <input type="text" value="%" disabled class="w-1/4 rounded-sm border-2 px-3">
-                    <input required type="number" id="returnRate" placeholder="0,0" class="w-1/2 border-2 px-3">
+                    <input required type="number" id="returnRate" name="returnRate" placeholder="0,0" class="w-1/2 border-2 px-3">
                     <select name="" id="returnRateOption" class="w-1/4 rounded-sm border-2 hover:bg-emerald-600 hover:text-slate-200 px-1">
                         <option value="monthly">Mensal</option>
                         <option value="yearly">Anual</option>
@@ -55,7 +54,7 @@
                 <label for="inicial-amount" class="font-bold text-grey-500">Imposto sobre o lucro</label>
                 <div class="flex w-full ">
                     <input type="text" value="%" disabled class="w-1/4 rounded-sm border-2 px-3">
-                    <input required type="number" id="tax" placeholder="0,0" class="w-3/4 border-2 px-3">
+                    <input required type="number" id="tax" name="tax" placeholder="0,0" class="w-3/4 border-2 px-3">
                 </div>
             </div>
 
